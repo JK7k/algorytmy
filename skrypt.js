@@ -11,3 +11,18 @@ function euklidesOblicz(){
     }
     document.getElementById("euklidesWynik").value=liczbaA;
 }
+function obliczNWW(){
+    let liczbaNWWA=parseInt(document.getElementById("liczbaNWWA").value);
+    let liczbaNWWB=parseInt(document.getElementById("liczbaNWWB").value);
+    let x=liczbaNWWA*liczbaNWWB;
+    
+    while(liczbaNWWB!==0){
+        c=liczbaNWWA%liczbaNWWB;
+        liczbaNWWA=liczbaNWWB;
+        liczbaNWWB=c;
+    }
+    let nww=x/liczbaNWWA;
+    document.getElementById("nwwWynik").value=nww;
+
+    
+}
